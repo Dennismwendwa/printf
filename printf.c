@@ -24,7 +24,6 @@ int _printf(const char *format, ...)
 
 	for (i = 0; i < n; i++)
 	{
-	
 		for (k = 0; k <= 9; k++)
 			numbers = i;
 
