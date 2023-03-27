@@ -11,7 +11,7 @@
   * Return:- Always 0 (success)
   */
 
-int get_precision(const *format, int *i, va_list ap)
+int get_precision(const char *format, int *i, va_list ap)
 {
 	int curr_i = *i + 1;
 	int precision = -1;

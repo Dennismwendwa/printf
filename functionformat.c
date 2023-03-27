@@ -121,7 +121,7 @@ int print_int(va_list types, char buffer[], int flags, int width,
 	long int n = va_arg(types, long int);
 	unsigned long int num;
 
-	n = convent_size_number(n, size);
+	n = convert_size_number(n, size);
 
 	if (n == 0)
 		buffer[i--] = '\0';
@@ -181,7 +181,7 @@ int print_binary(va_list types, char buffer[], int flags, int width,
 		a[i] = (n / m) % 2;
 	}
 
-	for (i = 0; sum = 0; count = 0; i < 32; i++)
+	for (i = 0, sum = 0, count = 0; i < 32; i++)
 	{
 		sum += a[i];
 		if (sum || i == 32)
